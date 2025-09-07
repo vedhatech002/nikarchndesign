@@ -1,0 +1,204 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      "Roboto", sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+  }
+}
+
+@layer utilities {
+  .animate-fadeInUp {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 0.6s;
+  }
+
+  /* Custom silver color utilities */
+  .text-silver-100 {
+    color: #f8fafc;
+  }
+  .text-silver-200 {
+    color: #e2e8f0;
+  }
+  .text-silver-300 {
+    color: #cbd5e1;
+  }
+  .text-silver-400 {
+    color: #94a3b8;
+  }
+  .text-silver-500 {
+    color: #64748b;
+  }
+  .text-silver-600 {
+    color: #475569;
+  }
+  .text-silver-700 {
+    color: #334155;
+  }
+  .text-silver-800 {
+    color: #1e293b;
+  }
+
+  .bg-silver-100 {
+    background-color: #f8fafc;
+  }
+  .bg-silver-200 {
+    background-color: #e2e8f0;
+  }
+  .bg-silver-300 {
+    background-color: #cbd5e1;
+  }
+  .bg-silver-400 {
+    background-color: #94a3b8;
+  }
+  .bg-silver-500 {
+    background-color: #64748b;
+  }
+  .bg-silver-600 {
+    background-color: #475569;
+  }
+  .bg-silver-700 {
+    background-color: #334155;
+  }
+  .bg-silver-800 {
+    background-color: #1e293b;
+  }
+
+  .border-silver-100 {
+    border-color: #f8fafc;
+  }
+  .border-silver-200 {
+    border-color: #e2e8f0;
+  }
+  .border-silver-300 {
+    border-color: #cbd5e1;
+  }
+  .border-silver-400 {
+    border-color: #94a3b8;
+  }
+  .border-silver-500 {
+    border-color: #64748b;
+  }
+  .border-silver-600 {
+    border-color: #475569;
+  }
+
+  .from-silver-300 {
+    --tw-gradient-from: #cbd5e1;
+  }
+  .from-silver-400 {
+    --tw-gradient-from: #94a3b8;
+  }
+  .from-silver-500 {
+    --tw-gradient-from: #64748b;
+  }
+  .from-silver-600 {
+    --tw-gradient-from: #475569;
+  }
+
+  .to-silver-300 {
+    --tw-gradient-to: #cbd5e1;
+  }
+  .to-silver-400 {
+    --tw-gradient-to: #94a3b8;
+  }
+  .to-silver-500 {
+    --tw-gradient-to: #64748b;
+  }
+  .to-silver-600 {
+    --tw-gradient-to: #475569;
+  }
+
+  .via-silver-200 {
+    --tw-gradient-via: #e2e8f0;
+  }
+  .via-silver-300 {
+    --tw-gradient-via: #cbd5e1;
+  }
+  .via-silver-400 {
+    --tw-gradient-via: #94a3b8;
+  }
+
+  /* Metallic gradient effects */
+  .metallic-gradient {
+    background: linear-gradient(
+      135deg,
+      #c0c0c0 0%,
+      #ffffff 25%,
+      #c0c0c0 50%,
+      #a8a8a8 75%,
+      #c0c0c0 100%
+    );
+  }
+
+  .metallic-text {
+    background: linear-gradient(
+      135deg,
+      #e2e8f0 0%,
+      #ffffff 25%,
+      #cbd5e1 50%,
+      #94a3b8 75%,
+      #e2e8f0 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  background-color: #000000;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Selection colors */
+::selection {
+  background-color: #94a3b8;
+  color: #000000;
+}
+
+::-moz-selection {
+  background-color: #94a3b8;
+  color: #000000;
+}
