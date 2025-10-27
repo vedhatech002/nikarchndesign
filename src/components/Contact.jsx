@@ -1,5 +1,5 @@
 // src/pages/Contact.jsx
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import contactHeroImg from "../assets/contact_hero.jpg"; // Replace with your stock image
 
@@ -83,7 +83,7 @@ const Contact = () => {
           </div>
 
           <form
-            onSubmit={handleSubmit} // 🔥 this is where you call handleSubmit
+            onSubmit={handleSubmit}
             className="grid grid-cols-1 md:grid-cols-2 gap-8"
           >
             <input
@@ -119,12 +119,49 @@ const Contact = () => {
             ></textarea>
 
             <div className="md:col-span-2 flex justify-center">
-              <button
-                type="submit"
-                className="bg-white text-black px-10 py-3 rounded-md hover:bg-gray-800 hover:text-white transition"
+              <motion.a
+                href="#contact"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
+                className="group relative inline-flex items-center gap-3 px-8 py-2
+                            bg-white text-black font-serif font-semibold uppercase tracking-wide text-sm
+                            rounded-md overflow-hidden transition-all duration-500 ease-in-out"
               >
-                Send Message
-              </button>
+                <span className="relative z-10 transition-colors duration-500 group-hover:text-white">
+                  Send Message
+                </span>
+
+                {/* Arrow */}
+                <motion.span
+                  className="relative z-10 flex items-center transition-transform duration-500"
+                  whileHover={{ x: 6 }}
+                  transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5 transition-colors duration-500 group-hover:text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M5 12h14m0 0l-6-6m6 6l-6 6"
+                    />
+                  </svg>
+                </motion.span>
+
+                {/* Metallic Gray Hover Layer */}
+                <span
+                  className="absolute inset-0 rounded-md 
+                              bg-gradient-to-r from-gray-700 via-gray-800 to-gray-900
+                              opacity-0 group-hover:opacity-100
+                              border border-transparent group-hover:border-white
+                              transition-all duration-500 ease-in-out"
+                />
+              </motion.a>
             </div>
           </form>
         </div>

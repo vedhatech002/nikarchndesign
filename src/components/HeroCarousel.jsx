@@ -142,8 +142,8 @@ const HeroCarousel = () => {
       </div>
 
       {/* --- Accent Lines --- */}
-      <div className="absolute top-1/3 left-10 w-px h-36 bg-gradient-to-b from-transparent via-silver-400/60 to-transparent" />
-      <div className="absolute bottom-1/3 right-10 w-px h-40 bg-gradient-to-b from-transparent via-silver-400/60 to-transparent" />
+      {/* <div className="absolute top-1/3 left-10 w-px h-36 bg-gradient-to-b from-transparent via-silver-400/60 to-transparent" />
+      <div className="absolute bottom-1/3 right-10 w-px h-40 bg-gradient-to-b from-transparent via-silver-400/60 to-transparent" /> */}
     </section>
   );
 };
