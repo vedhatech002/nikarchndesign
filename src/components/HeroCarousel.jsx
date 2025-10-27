@@ -82,11 +82,11 @@ const HeroCarousel = () => {
                 {slides[current].subtitle}
               </h3>
 
-              <h1 className="text-5xl md:text-7xl text-silver-100 font-bold mb-6 leading-tight">
+              <h1 className="text-3xl md:text-4xl text-silver-100 font-bold mb-4 leading-tight">
                 {slides[current].title}
               </h1>
 
-              <p className="text-silver-300 text-lg max-w-2xl leading-relaxed mb-12">
+              <p className="text-silver-300 text-lg max-w-2xl leading-relaxed mb-8">
                 {slides[current].description}
               </p>
 
@@ -95,7 +95,7 @@ const HeroCarousel = () => {
                 href="#contact"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                className="group relative inline-flex items-center gap-3 px-8 py-3 
+                className="group relative inline-flex items-center gap-3 px-8 py-2 
                            border border-transparent bg-white text-black font-serif font-semibold
                            uppercase tracking-wide text-sm rounded-md overflow-hidden
                            transition-all duration-500 ease-in-out"
