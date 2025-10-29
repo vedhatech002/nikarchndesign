@@ -92,7 +92,7 @@ const HeroCarousel = () => {
 
               {/* CTA Button */}
               <motion.a
-                href="#contact"
+                href="/contact"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
                 className="group relative inline-flex items-center gap-3 px-8 py-2 

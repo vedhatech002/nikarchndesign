@@ -1,7 +1,7 @@
 // src/pages/Contact.jsx
 import { useState } from "react";
 import { motion } from "framer-motion";
-import contactHeroImg from "../assets/contact_hero.jpg"; // Replace with your stock image
+import contactHeroImg from "../assets/contact_hero.jpg";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -119,7 +119,7 @@ const Contact = () => {
             ></textarea>
 
             <div className="md:col-span-2 flex justify-center">
-              <motion.a
+              <motion.button
                 href="#contact"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
@@ -161,7 +161,7 @@ const Contact = () => {
                               border border-transparent group-hover:border-white
                               transition-all duration-500 ease-in-out"
                 />
-              </motion.a>
+              </motion.button>
             </div>
           </form>
         </div>
@@ -203,9 +203,9 @@ const Contact = () => {
               </h4>
             </div>
             <p className="text-silver-100 leading-relaxed">
-              Top Floor, Cub Bank, <br />
-              Maruthi Nagar, <br />
-              Tiruchirappalli - 620002
+              House no. 1676 , <br />
+              Sector-37 , <br />
+              Noida
             </p>
           </div>
 
@@ -257,7 +257,10 @@ const Contact = () => {
               </h4>
             </div>
             <p className="text-silver-100 text-base hover:text-silver-300 transition-colors duration-300">
-              +91 9843758669
+              +91 9958400882
+            </p>
+            <p className="text-silver-100 text-base hover:text-silver-300 transition-colors duration-300">
+              +91 9810858725
             </p>
           </div>
 
@@ -352,15 +355,34 @@ const Contact = () => {
       </div>
 
       {/* --- Map --- */}
-      <div className="relative w-full h-[400px]">
+      {/* --- Map Section --- */}
+      <div className="relative w-full h-[450px] overflow-hidden">
+        {/* Embedded Google Map */}
         <iframe
           title="Office Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.466476356328!2d78.683338!3d10.799176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baa5b44b8d7e7c1%3A0x85c2a2b46aa4f6a0!2sTiruchirappalli!5e0!3m2!1sen!2sin!4v1698528300000!5m2!1sen!2sin"
-          className="absolute inset-0 w-full h-full border-0"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.197410568195!2d77.3409157!3d28.5658855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce55555555555%3A0x0000000000000000!2s28%C2%B033'57.2%22N%2077%C2%B020'36.6%22E!5e0!3m2!1sen!2sin!4v1730160000000!5m2!1sen!2sin"
+          className="absolute inset-0 w-full h-full border-0 grayscale-[30%] brightness-[0.6] contrast-[1.1]"
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
+
+        {/* Dark gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none"></div>
+
+        {/* Animated metallic location pin */}
+        <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-[110%] z-10">
+          <motion.div
+            animate={{ y: [0, -8, 0] }}
+            transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+            className="relative"
+          >
+            {/* Pin body */}
+            <div className="w-6 h-6 bg-gradient-to-b from-silver-200 to-silver-500 rounded-full border border-silver-400 shadow-[0_0_12px_rgba(255,255,255,0.5)]" />
+            {/* Red marker glow */}
+            <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-2 h-2 bg-red-600 rounded-full animate-ping opacity-70"></span>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

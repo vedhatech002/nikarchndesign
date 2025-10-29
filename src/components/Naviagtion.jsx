@@ -33,16 +33,23 @@ const Navigation = () => {
 
   // 🔥 Smooth scroll handler for same-page sections
   const handleNavClick = (item) => {
-    if (item.path.startsWith("#")) {
-      // scroll within the same page
-      const el = document.querySelector(item.path);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
+    const isSection = item.path.startsWith("#");
+    const isHome = window.location.pathname === "/";
+
+    if (isSection) {
+      if (isHome) {
+        // ✅ If already on home, just scroll
+        const el = document.querySelector(item.path);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        // 🧭 If not on home, navigate first, then scroll after load
+        navigate("/", { state: { scrollTo: item.path } });
       }
     } else {
-      // navigate to a route (if not on same path)
+      // Normal page navigation (About, Contact)
       navigate(item.path);
     }
+
     setIsOpen(false);
   };
 
@@ -76,7 +83,7 @@ const Navigation = () => {
                 <motion.button
                   key={item.label}
                   onClick={() => handleNavClick(item)}
-                  className="relative text-silver-300 uppercase tracking-widest text-sm font-medium hover:text-white transition-colors duration-300"
+                  className="relative text-silver-300 uppercase tracking-widest text-sm font-medium hover:text-white transition-colors duration-300 cursor-pointer"
                 >
                   {item.label}
                   <motion.span
