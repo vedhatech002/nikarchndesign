@@ -4,6 +4,7 @@ import App from "./App"; // top-level layout (Navigation + outlet or you can hav
 import Home from "./pages/Home";
 import Contact from "./components/Contact";
 import About from "./components/About";
+import ProjectDetail from "./pages/ProjectDetail";
 // import { Contact } from "lucide-react";
 // create page components that render the existing components
 // import About from "./pages/About";
@@ -21,6 +22,7 @@ const routes = [
       //   { path: "portfolio", element: <Portfolio /> },
       //   { path: "services", element: <Services /> },
       { path: "contact", element: <Contact /> },
+      { path: "projects/:id", element: <ProjectDetail /> },
     ],
   },
 ];

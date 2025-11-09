@@ -54,7 +54,7 @@ const Navigation = () => {
   };
 
   return (
-    <motion.nav className="fixed inset-x-0 top-0 z-50 font-serif">
+    <motion.nav className="fixed inset-x-0 top-0 z-50 font-serif" id="site-nav">
       <motion.div
         aria-hidden
         variants={backdropVariant}
