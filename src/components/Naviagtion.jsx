@@ -4,7 +4,6 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/logo.png";
-
 const navItems = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
@@ -54,7 +53,12 @@ const Navigation = () => {
   };
 
   return (
-    <motion.nav className="fixed inset-x-0 top-0 z-50 font-serif" id="site-nav">
+    <motion.nav
+      className={`fixed inset-x-0 top-0 z-50 font-serif ${
+        isOpen && "bg-black/95"
+      }`}
+      id="site-nav"
+    >
       <motion.div
         aria-hidden
         variants={backdropVariant}
@@ -69,12 +73,15 @@ const Navigation = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center gap-2">
               <img
                 src={logo}
                 alt="Logo"
-                className="h-8 w-auto object-contain"
+                className="h-10 w-auto object-contain"
               />
+              {/* <h2 className="text-2xl font-semibold leading-tight text-silver-100">
+                Nikarchndesign
+              </h2> */}
             </Link>
 
             {/* Desktop nav */}

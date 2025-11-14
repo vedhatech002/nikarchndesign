@@ -231,7 +231,7 @@ const Contact = () => {
               </h4>
             </div>
             <p className="text-silver-100 text-base hover:text-silver-300 transition-colors duration-300">
-              theactiondesigns@gmail.com
+              nickarcndesigns@gmail.com
             </p>
           </div>
 
@@ -371,18 +371,6 @@ const Contact = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none"></div>
 
         {/* Animated metallic location pin */}
-        <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-[110%] z-10">
-          <motion.div
-            animate={{ y: [0, -8, 0] }}
-            transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-            className="relative"
-          >
-            {/* Pin body */}
-            <div className="w-6 h-6 bg-gradient-to-b from-silver-200 to-silver-500 rounded-full border border-silver-400 shadow-[0_0_12px_rgba(255,255,255,0.5)]" />
-            {/* Red marker glow */}
-            <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-2 h-2 bg-red-600 rounded-full animate-ping opacity-70"></span>
-          </motion.div>
-        </div>
       </div>
     </section>
   );

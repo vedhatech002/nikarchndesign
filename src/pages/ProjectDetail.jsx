@@ -128,7 +128,7 @@ const ProjectDetail = () => {
       <section
         aria-label="project-hero"
         className="relative overflow-hidden"
-        style={{ minHeight: "56vh", paddingTop: "var(--nav-h, 72px)" }}
+        style={{ minHeight: "100vh", paddingTop: "var(--nav-h, 72px)" }}
       >
         {/* parallax hero image like contact page */}
         <motion.img
@@ -145,7 +145,7 @@ const ProjectDetail = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/60 to-transparent" />
 
         {/* content box using same visual style as contact */}
-        <div className="relative z-10 max-w-6xl mx-auto h-full flex items-end pb-8 md:pb-12 px-6 md:px-12">
+        <div className="relative z-10 max-w-6xl mx-auto h-[70vh] flex items-end pb-8 md:pb-12 px-6 md:px-12">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -185,7 +185,7 @@ const ProjectDetail = () => {
       {/* OVERVIEW */}
       <section
         id="overview-section"
-        className="max-w-6xl mx-auto px-6 md:px-12 py-16 lg:py-20"
+        className="max-w-6xl mx-auto px-6 md:px-12 py-16 lg:py-20 h-[100vh]"
       >
         <div className="grid lg:grid-cols-12 gap-10 items-stretch">
           <motion.div
@@ -200,7 +200,7 @@ const ProjectDetail = () => {
               <h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">
                 Project Overview
               </h2>
-              <p className="text-silver-200 leading-relaxed text-lg">
+              <p className="text-silver-200 leading-relaxed text-md">
                 {project.description}
               </p>
 
@@ -218,7 +218,7 @@ const ProjectDetail = () => {
                   </div>
                 </div>
                 <div>
-                  <div className="text-gray-400">Program Area</div>
+                  <div className="text-gray-400">Time Line</div>
                   <div className="text-white font-medium mt-1">
                     {project.programArea}
                   </div>
@@ -232,8 +232,10 @@ const ProjectDetail = () => {
               </div>
             </div>
 
-            <div className="mt-8 lg:mt-auto">
-              <p className="text-silver-300">{project.detailParagraph}</p>
+            <div className="mt-[1rem]">
+              <p className="text-silver-300 text-md">
+                {project.detailParagraph}
+              </p>
             </div>
           </motion.div>
 
@@ -256,7 +258,7 @@ const ProjectDetail = () => {
         </div>
       </section>
       {/* DESCRIPTION */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 py-12 lg:py-20 border-t border-neutral-800">
+      <section className="max-w-6xl mx-auto px-6 md:px-12 py-12 lg:py-20 border-t border-neutral-800 h-[80vh]">
         <div className="grid lg:grid-cols-12 gap-10 items-center">
           <motion.div
             className="lg:col-span-5"
@@ -284,14 +286,14 @@ const ProjectDetail = () => {
             <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
               Project Description
             </h3>
-            <p className="text-silver-200 leading-relaxed text-lg">
+            <p className="text-silver-200 leading-relaxed text-md">
               {project.moreDescription}
             </p>
           </motion.div>
         </div>
       </section>
       {/* GALLERY - interactive slider that uses carousel-style arrows */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 py-16 lg:py-20">
+      <section className="max-w-6xl mx-auto px-6 md:px-12 py-16 lg:py-20 h-[100vh]">
         <div className="flex items-center justify-between mb-6">
           <h4 className="text-lg font-semibold text-white">Gallery</h4>
           <div className="flex gap-3">

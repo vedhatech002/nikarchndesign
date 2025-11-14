@@ -66,7 +66,7 @@ const HeroCarousel = () => {
 
       {/* --- Text + Button --- */}
       <div className="absolute inset-0 flex items-center">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="max-w-6xl mx-auto px-6 lg:px-10">
           {/* Hero Text */}
           <AnimatePresence mode="wait">
             <motion.div
